@@ -45,10 +45,16 @@ let result =`${a10} ${a11} ${a12}`;
 console.log(result);
 
 
-let a= 100;
-let b = '100'
-let c = true;
-console.log (a+b+c)
+let c1= 100;
+let c2 = '100'
+let cRes = true;
+
+console.log(typeof c1);
+console.log(typeof c2);
+console.log(typeof cRes);
+
+
+console.log (c1+c2+cRes)
 
 
 
