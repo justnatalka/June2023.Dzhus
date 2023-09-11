@@ -203,5 +203,14 @@ class Prince {
 }
 let PrinceCharming = new Prince('Ivan', 20, 35);
 
-console.log(Cinderelas.filter(value => value.shoeSize === PrinceCharming.foundShoeSize));
-console.log(Cinderelas.find(value => value.shoeSize === PrinceCharming.foundShoeSize));
+// console.log(Cinderelas.filter(value => value.shoeSize === PrinceCharming.foundShoeSize));
+
+
+// console.log(Cinderelas.find(value => value.shoeSize === PrinceCharming.foundShoeSize));
+
+let whoIsShe = (name);
+for (let i=0; i < Cinderelas.length; i++)
+     if (Cinderelas[i].shoeSize === PrinceCharming.foundShoeSize) {
+         console.log(Cinderelas[i].name)
+     }
+console.log(whoIsShe);
