@@ -5,7 +5,23 @@
     <title>Session</title>
 </head>
 <body>
-<script src="main10.js">
+<script>
+    let dates = {};
+
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+        dates[key] = value;
+    }
+    console.log(dates);
+    for (const element in dates) {
+        let div1 = document.createElement('div1');
+        if(element.includes('session')){
+            div1.innerHTML= `<p>${element}- ${dates[element]}</p>`;
+            document.body.appendChild(div1);
+        }
+    }
+
 </script>
 </body>
 </html>
