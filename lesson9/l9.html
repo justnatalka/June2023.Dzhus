@@ -51,13 +51,12 @@
             background-color: lightskyblue;
             height: 70vh;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            margin-top: 0px;
+            font-size: large;
         }
 
-        .listing {
-            margin-bottom: 20px;
-            align-items: flex-start;
-        }
+
 
 
     </style>
@@ -273,34 +272,6 @@
         }
     ];
 
-
-    // for (let coursesArrayElement of coursesArray) {
-    //     let div5 = document.createElement('div');
-    //     div5.classList.add('main');
-    //     let div6 = document.createElement('div');
-    //     div6.classList.add('title');
-    //     div6.innerText = coursesArrayElement.title;
-    //     let months = document.createElement('div');
-    //     months.classList.add('monthsDuration');
-    //     months.innerText = coursesArrayElement.monthDuration;
-    //     let hours = document.createElement('div');
-    //     hours.classList.add('hour');
-    //     hours.innerText = coursesArrayElement.hourDuration;
-    //     let modules = document.createElement('div');
-    //     modules.classList.add('modules');
-    //     for (let item of coursesArrayElement.modules) {
-    //         let modules1 = document.createElement('div');
-    //         modules1.classList.add('list')
-    //         modules1.innerText = modules;
-    //         modules.append(modules1);
-    //     }
-    //
-    //     div5.append(div6, months, hours, modules)
-    //     document.body.append(div5)
-    // }
-    //
-    //
-
     for (let item of coursesArray) {
         let divMain = document.createElement('div');
         divMain.classList.add('main');
@@ -316,11 +287,11 @@
         hourDur.classList.add('hours');
         hourDur.innerText = `Duration in hours - ${ item.hourDuration}`;
         div1.append(monthDur, hourDur);
-        let modules = document.createElement('div');
+        let modules = document.createElement('ul');
         modules.classList.add('modules');
         modules.innerText = 'Moduls:'
         for (let module of item.modules) {
-            let module1 = document.createElement('div');
+            let module1 = document.createElement('li');
             module1.classList.add('listing')
             module1.innerText = module;
             modules.append(module1);
